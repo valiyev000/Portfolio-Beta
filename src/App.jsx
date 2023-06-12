@@ -13,6 +13,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Portfolios from './components/Portfolios';
 import Journey from './components/Journey';
+import Blog from './components/Blog';
 
 const data = {
   portfolios: [
@@ -53,8 +54,40 @@ const data = {
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
     },
   ],
-  journey: [],
-  blog: []
+  timeline: [
+    {
+      id: 1,
+      title: "The resolution, What am i gonna do?",
+      description: "It's all about the new year and works i have to do",
+      date: "2 January 2021"
+    },
+    {
+      id: 2,
+      title: "Gow - command line tool to manage works",
+      description: "Gow is cli tool written in golang using cobra",
+      date: "29 January 2021"
+    },
+    {
+      id: 3,
+      title: "Started designing what you are seeing right now!",
+      description: "Yes in 2th of february i started designing this site",
+      date: "2 February 2021"
+    },
+    {
+      id: 4,
+      title: "Maybe it's time to deploy...!",
+      description: "Maybe in this day i completed the front and backend of this",
+      date: "1 March 2021"
+    },
+  ],
+  blog: [
+    {
+      id: 1,
+      src: "../src/images/blog/blog1.svg", //TODO YARIMCIQ QALDI
+      header: "There is more than you know",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+    },
+  ]
 }
 
 
@@ -65,7 +98,7 @@ function App() {
 
 
   return (
-    <ContextApi.Provider value={{data}}>
+    <ContextApi.Provider value={{ data }}>
       <Router>
         <Navbar />
         <Switch>
@@ -84,7 +117,9 @@ function App() {
           <Route exact path="/journey">
             <Journey />
           </Route>
-          <Route exact path="/blog">Blog</Route>
+          <Route exact path="/blog">
+            <Blog />
+          </Route>
           <Route path="*"><div className="errorPage">U r in wrong place...</div></Route>
         </Switch>
       </Router>

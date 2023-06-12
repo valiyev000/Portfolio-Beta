@@ -1,8 +1,8 @@
-body{
+body {
     background: #000;
 }
 
-nav{
+nav {
     width: 100%;
     height: 54px;
     display: flex;
@@ -17,18 +17,18 @@ nav{
     z-index: 20;
     top: 0;
     left: 0;
-    a{
+    a {
         font-weight: 700;
         font-size: 14px;
         line-height: 17px;
         text-decoration: none;
         position: relative;
         padding: 5px 8px;
-        &::before{
+        &::before {
             content: "";
             width: 10px;
             height: 10px;
-            background: #FDB827;
+            background: #fdb827;
             border-radius: 50%;
             position: absolute;
             top: 9px;
@@ -40,7 +40,8 @@ nav{
     }
 }
 
-.homeMain{ //TODO padding'e sonda fikir ver
+.homeMain {
+    //TODO padding'e sonda fikir ver
     padding-top: 54px;
     display: flex;
     flex-direction: column;
@@ -49,19 +50,19 @@ nav{
     height: 100vh;
     gap: 44px;
     position: relative;
-    .header{
+    .header {
         font-weight: 900;
         font-size: 64px;
         line-height: 77px;
         text-align: center;
         width: 740px;
         max-width: 100%;
-        span{
+        span {
             position: relative;
             z-index: -10;
         }
     }
-    .description{
+    .description {
         width: 740px;
         max-width: 100%;
         text-align: center;
@@ -69,8 +70,8 @@ nav{
         font-size: 16px;
         line-height: 19px;
     }
-    .linkBtns{
-        a{
+    .linkBtns {
+        a {
             display: inline-block;
             border-radius: 8px;
             margin: 5px;
@@ -81,97 +82,98 @@ nav{
             line-height: 19px;
             transition: 0.3s all ease-in-out;
         }
-        >:nth-child(1){
-            background: #FDB827;
+        > :nth-child(1) {
+            background: #fdb827;
             color: #000;
-            &:hover{
+            &:hover {
                 background: #af7e14;
             }
         }
-        >:nth-child(2){
+        > :nth-child(2) {
             background: rgba(255, 255, 255, 0.13);
-            &:hover{
+            &:hover {
                 background: rgba(167, 167, 167, 0.13);
             }
         }
     }
-    #withHeadphone,#handImg{
+    #withHeadphone,
+    #handImg {
         position: absolute;
     }
-    #withHeadphone{
+    #withHeadphone {
         top: 9%;
         left: 5%;
         z-index: -5;
     }
-    #handImg{
+    #handImg {
         right: 0;
         bottom: 0;
         z-index: -5;
     }
 }
 
-.aboutMain{
+.aboutMain {
     padding: 54px 4%;
     width: 100%;
     position: relative;
-    .aboutTop{
+    .aboutTop {
         display: flex;
         align-items: center;
         gap: 6px;
-        .description{
+        .description {
             font-weight: 700;
             font-size: 45px;
             line-height: 54px;
             width: 720px;
             max-width: fit-content;
-            span{
-                color: #FDB827;
+            span {
+                color: #fdb827;
             }
         }
     }
-    .aboutBottom{
+    .aboutBottom {
         font-weight: 400;
         font-size: 12px;
         line-height: 15px;
         margin-top: 20px;
-        >span{
+        > span {
             font-weight: 700;
         }
     }
 }
 
-.contactMain{
+.contactMain {
     padding: 54px 5%;
     min-height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
-    .contactInfo{
+    .contactInfo {
         height: 100%;
         position: relative;
         width: 60%;
-        .header{
+        .header {
             font-weight: 700;
             font-size: 48px;
             line-height: 58px;
             margin: 63px 0 17px 0;
         }
-        .description{
+        .description {
             font-weight: 600;
             font-size: 16px;
             line-height: 19px;
             margin-bottom: 40px;
-            a{
+            a {
                 transition: 0.3s all ease-in-out;
             }
-            a:hover{
+            a:hover {
                 color: #5c5c5c;
             }
         }
-        .linkBtns{
+        .linkBtns {
             display: flex;
             gap: 10px;
-            a{
+            a {
                 display: inline-block;
                 border-radius: 8px;
                 padding: 15px 18px;
@@ -181,66 +183,66 @@ nav{
                 line-height: 19px;
                 transition: 0.3s all ease-in-out;
             }
-            >:nth-child(1){
-                background: #FDB827;
+            > :nth-child(1) {
+                background: #fdb827;
                 color: #000;
-                &:hover{
+                &:hover {
                     background: #af7e14;
                 }
             }
-            >:nth-child(2){
+            > :nth-child(2) {
                 background: rgba(255, 255, 255, 0.13);
-                &:hover{
+                &:hover {
                     background: rgba(167, 167, 167, 0.13);
                 }
             }
         }
     }
-    >img{
+    > img {
         position: absolute;
         left: 0;
         top: calc(50vh - 234px);
     }
 }
 
-.portfoliosMain{
+.portfoliosMain {
     width: 100%;
     height: fit-content;
     padding: 100px 6%;
-    .flexContainer{
+    .flexContainer {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        .items{
+        .items {
             width: 48%;
             height: 181px;
             margin: 1%;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.35);
             border-radius: 19px;
-            .flexBox{
+            .flexBox {
                 display: flex;
-                >img{
+                > img {
                     height: 100%;
                     margin-right: 3%;
                 }
-                .aside{
+                .aside {
                     padding: 14px 0;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    .header{
+                    .header {
                         font-weight: 700;
                         font-size: 14px;
                         line-height: 17px;
                     }
-                    .description{
+                    .description {
                         font-weight: 500;
                         font-size: 12px;
                         line-height: 15px;
                         margin-bottom: 30px;
                     }
-                    >a{
+                    > a {
                         font-weight: 500;
                         font-size: 12px;
                         line-height: 15px;
@@ -251,8 +253,106 @@ nav{
     }
 }
 
-.journeyMain{
-    
+.journeyMain {
+    padding: 100px 4%;
+    display: flex;
+    justify-content: center;
+    .flexContainer {
+        width: 100%;
+        display: flex;
+        gap: 3%;
+        .mainSide {
+            order: 0;
+            width: 75%;
+            &Top {
+                display: flex;
+                align-items: center;
+                margin-bottom: 40px;
+                > img {
+                    margin-right: 18px;
+                    height: 100%;
+                }
+                &Aside {
+                    .header {
+                        font-weight: 700;
+                        font-size: 48px;
+                        line-height: 58px;
+                        margin-bottom: 30px;
+                    }
+                    .description {
+                        width: 100%;
+                        max-width: 350px;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: rgba(255, 255, 255, 0.45);
+                    }
+                }
+            }
+            &Bottom {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+        .timeLine {
+            order: 1;
+            width: 25%;
+            min-width: 220px;
+            .header {
+                font-weight: 900;
+                font-size: 30px;
+                line-height: 30px;
+            }
+            .cardBox {
+                width: 100%;
+                padding-top: 50px;
+                .cards {
+                    margin-bottom: 40px;
+                    position: relative;
+                    background: rgba(253, 184, 39, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.35);
+                    border-radius: 9px;
+                    padding: 13px;
+                    .date {
+                        position: absolute;
+                        top: -20px;
+                        left: 0;
+                        font-size: 13px;
+                        line-height: 13px;
+                        color: rgba(255, 255, 255, 0.57);
+                    }
+                    .title {
+                        font-weight: 700;
+                        font-size: 15px;
+                        margin-bottom: 14px;
+                        line-height: 15px;
+                    }
+                    .description {
+                        font-weight: 500;
+                        font-size: 13px;
+                        line-height: 13px;
+                        color: rgba(255, 255, 255, 0.56);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.errorPage {
+    //TODO NEED TO DO
+    font-size: 60px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: animationErr;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
 }
 
 
@@ -268,18 +368,7 @@ nav{
 
 
 
-
-
-
-
-
-
-.errorPage{ //TODO NEED TO DO
-    margin-top: 60px;
-    font-size: 50px;
-}
-
-.copyrightSection{
+.copyrightSection {
     position: absolute;
     left: 15px;
     bottom: 15px;
@@ -288,7 +377,7 @@ nav{
     line-height: 15px;
 }
 
-.exportLinks{
+.exportLinks {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -300,15 +389,23 @@ nav{
     left: 0;
 }
 
-
-
-
-
 // LIBRARY
 
-.selectedNav{
-    &::before{
+.selectedNav {
+    &::before {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes animationErr {
+    0% {
+        transform: scale(0.6);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.6);
     }
 }
