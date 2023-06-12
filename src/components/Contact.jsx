@@ -33,6 +33,7 @@ export default function Contact() {
                 <a href="http://github.com"><img src={githubIcon} alt="githubIcon" /></a>
                 <a href="http://twitter.com"><img src={twitterIcon} alt="twitterIcon" /></a>
                 <a href="http://google.com"><img src={unknownIcon} alt="unknownIcon" /></a>
+
             </div>
             <div className="copyrightSection">Copyright © 2021 All rights reserved.</div>
             <img src={manWithBag} alt="man-with-bag.svg" />

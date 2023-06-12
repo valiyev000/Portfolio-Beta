@@ -203,6 +203,66 @@ nav{
     }
 }
 
+.portfoliosMain{
+    width: 100%;
+    height: fit-content;
+    padding: 100px 6%;
+    .flexContainer{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .items{
+            width: 48%;
+            height: 181px;
+            margin: 1%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 19px;
+            .flexBox{
+                display: flex;
+                >img{
+                    height: 100%;
+                    margin-right: 3%;
+                }
+                .aside{
+                    padding: 14px 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .header{
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+                    .description{
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 15px;
+                        margin-bottom: 30px;
+                    }
+                    >a{
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.journeyMain{
+    
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -218,11 +278,6 @@ nav{
     margin-top: 60px;
     font-size: 50px;
 }
-
-
-
-
-
 
 .copyrightSection{
     position: absolute;
