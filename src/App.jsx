@@ -83,10 +83,34 @@ const data = {
   blog: [
     {
       id: 1,
-      src: "../src/images/blog/blog1.svg", //TODO YARIMCIQ QALDI
+      src: "../src/images/blog/blog1.svg",
       header: "There is more than you know",
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
     },
+    {
+      id: 2,
+      src: "../src/images/blog/blog2.svg",
+      header: "There is more than you know",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+    },
+    {
+      id: 3,
+      src: "../src/images/blog/blog3.svg",
+      header: "There is more than you know",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+    },
+    {
+      id: 4,
+      src: "../src/images/blog/blog4.svg",
+      header: "There is more than you know",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+    },
+    {
+      id: 5,
+      src: "../src/images/blog/blog5.svg",
+      header: "There is more than you know",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+    }
   ]
 }
 
@@ -120,7 +144,7 @@ function App() {
           <Route exact path="/blog">
             <Blog />
           </Route>
-          <Route path="*"><div className="errorPage">U r in wrong place...</div></Route>
+          <Route path="*"><div className="errorMain">U r in wrong place...</div></Route>
         </Switch>
       </Router>
     </ContextApi.Provider>

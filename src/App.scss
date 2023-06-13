@@ -3,51 +3,78 @@ body {
 }
 
 nav {
-    width: 100%;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-    background: linear-gradient(158.71deg, rgba(255, 255, 255, 0.4) -100%, rgba(255, 255, 255, 0.04) 100%);
-    box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(21px);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    position: fixed;
-    z-index: 20;
-    top: 0;
-    left: 0;
-    a {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
-        text-decoration: none;
-        position: relative;
-        padding: 5px 8px;
-        &::before {
-            content: "";
-            width: 10px;
-            height: 10px;
-            background: #fdb827;
-            border-radius: 50%;
-            position: absolute;
-            top: 9px;
-            left: -10px;
-            transition: 0.3s all ease-in-out;
-            opacity: 0;
-            transform: translateY(20px);
+    .navDesktop {
+        width: 100%;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        background: linear-gradient(158.71deg, rgba(255, 255, 255, 0.4) -100%, rgba(255, 255, 255, 0.04) 100%);
+        box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(21px);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        transition: 0.3s all ease-in-out;
+        a {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            text-decoration: none;
+            position: relative;
+            padding: 5px 8px;
+            &::before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                background: #fdb827;
+                border-radius: 50%;
+                position: absolute;
+                top: 9px;
+                left: -10px;
+                transition: 0.3s all ease-in-out;
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+    }
+    .navMobile{
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        width: 100%;
+        height: 54px; //todo deyismek lazimdi
+        .top{
+            background: linear-gradient(158.71deg, rgba(255, 255, 255, 0.4) -100%, rgba(255, 255, 255, 0.04) 100%);
+            box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+            height: 54px !important;
+            padding: 0 24px;
+            backdrop-filter: blur(21px);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            >img{
+                position: absolute;
+                top: calc(50% - 12px);
+                left: 24px;
+                cursor: pointer;
+            }
         }
     }
 }
 
 .homeMain {
-    //TODO padding'e sonda fikir ver
     padding-top: 54px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    min-height: 650px;
     gap: 44px;
     position: relative;
     .header {
@@ -120,6 +147,9 @@ nav {
         display: flex;
         align-items: center;
         gap: 6px;
+        > img {
+            width: unset;
+        }
         .description {
             font-weight: 700;
             font-size: 45px;
@@ -214,6 +244,7 @@ nav {
         flex-wrap: wrap;
         width: 100%;
         .items {
+            transition: 0.3s all ease-in-out;
             width: 48%;
             height: 181px;
             margin: 1%;
@@ -339,9 +370,55 @@ nav {
     }
 }
 
+.blogMain {
+    width: 100%;
+    padding: 90px 5%;
+    .flexContainer {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        > * {
+            transition: 0.3s all ease-in-out;
+        }
+        .cards {
+            width: 23%;
+            margin: 0 1%;
+            padding-bottom: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 19px;
+            > img {
+                width: 100%;
+                padding: 0 !important;
+            }
+            > * {
+                padding: 0 14px;
+            }
+            .title {
+                margin-top: 17px;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 17px;
+            }
+            .description {
+                margin-top: 10px;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 15px;
+            }
+            > a {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                margin-top: 17px;
+                display: inline-block;
+            }
+        }
+    }
+}
 
-
-.errorPage {
+.errorMain {
     //TODO NEED TO DO
     font-size: 60px;
     width: 100%;
@@ -363,10 +440,26 @@ nav {
 
 
 
+//* LIBRARY
 
+.selectedNav {
+    &::before {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+}
 
-
-
+@keyframes animationErr {
+    0% {
+        transform: scale(0.6);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.6);
+    }
+}
 
 .copyrightSection {
     position: absolute;
@@ -389,23 +482,243 @@ nav {
     left: 0;
 }
 
-// LIBRARY
 
-.selectedNav {
-    &::before {
-        opacity: 1;
-        transform: translateY(0);
+
+
+
+
+
+
+//* MEDIA QUERIES STARTING
+
+@media only screen and (max-width: 992px) {
+    nav {
+        .navDesktop{
+            gap: 3%;
+        }
+    }
+    .homeMain {
+        max-width: 90%;
+        margin: 0 auto;
+        .header {
+            font-size: 50px;
+        }
+        .copyrightSection {
+            display: none;
+        }
+    }
+    .aboutMain {
+        .aboutTop {
+            > img {
+                width: 40%;
+            }
+            .description {
+                font-size: 38px;
+                line-height: 50px;
+            }
+        }
+        .aboutBottom {
+            margin: 30px 0;
+        }
+        .copyrightSection {
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .exportLinks {
+            bottom: 30px;
+        }
+    }
+    .contactMain {
+        .contactInfo {
+            width: 90%;
+            margin-bottom: 30px;
+            .header {
+                font-size: 38px;
+            }
+            .linkBtns {
+                text-align: center;
+            }
+        }
+        > img {
+            display: none;
+        }
+        .copyrightSection {
+            width: 100%;
+            left: 0;
+            text-align: center;
+        }
+        .exportLinks {
+            bottom: 30px;
+        }
+    }
+    .portfoliosMain {
+        .flexContainer {
+            .items {
+                width: 100%;
+                .flexBox {
+                    .aside {
+                        .header {
+                            font-size: 17px;
+                        }
+                        .description,
+                        a {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .journeyMain {
+        .flexContainer {
+            flex-direction: column;
+            .mainSide {
+                order: 1;
+                width: 100%;
+            }
+            .timeLine {
+                order: 0;
+                width: 100%;
+                .cardBox {
+                    display: flex;
+                    overflow-x: auto;
+                    gap: 18px;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    .cards {
+                        width: 300px;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+        }
+    }
+    .blogMain {
+        .flexContainer {
+            .cards {
+                width: 31%;
+                margin: 0 1%;
+            }
+        }
     }
 }
 
-@keyframes animationErr {
-    0% {
-        transform: scale(0.6);
+@media only screen and (max-width: 576px) {
+    nav{
+        .navDesktop{
+            display: none;
+        }
+        .navMobile{
+            display: flex;
+        }
     }
-    50% {
-        transform: scale(1);
+    .homeMain {
+        .header {
+            font-size: 40px;
+            line-height: unset;
+        }
+        .description {
+            font-size: 13px;
+        }
+        #withHeadphone {
+            left: -15%;
+            width: 300px;
+        }
+        #handImg {
+            display: none;
+        }
+        .copyrightSection {
+            display: block;
+            width: 100%;
+            left: 0;
+            text-align: center;
+        }
+        .exportLinks {
+            bottom: 30px;
+        }
+        .linkBtns {
+            > a {
+                font-size: 13px;
+                padding: 12px 14px;
+            }
+        }
     }
-    100% {
-        transform: scale(0.6);
+    .aboutMain {
+        .aboutTop {
+            margin-top: -40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            > img {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+            .description {
+                text-align: center;
+                font-size: 32px;
+            }
+        }
+    }
+    .contactMain {
+        .contactInfo {
+            .description {
+                font-size: 13px;
+            }
+        }
+    }
+    .portfoliosMain {
+        .flexContainer {
+            gap: 10px;
+            .items {
+                width: 100%;
+                height: unset;
+                .flexBox {
+                    flex-direction: column;
+                    > img {
+                        height: 210px;
+                        margin-right: unset;
+                    }
+                    .aside {
+                        padding: 14px 20px;
+                        .header {
+                            font-size: 17px;
+                            margin-bottom: 11px;
+                        }
+                        .description {
+                            margin-bottom: 18px;
+                        }
+                        .description,
+                        a {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .journeyMain {
+        .flexContainer {
+            .mainSide {
+                &Top {
+                    > img {
+                        display: none;
+                    }
+                    &Aside {
+                        .header {
+                            font-size: 38px;
+                            line-height: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .blogMain {
+        .flexContainer {
+            .cards {
+                width: 100%;
+            }
+        }
     }
 }

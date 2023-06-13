@@ -3,11 +3,24 @@ import ContextApi from '../ContextApi'
 
 export default function Blog() {
 
-    const sample = useContext(ContextApi)
+    const {blog} = useContext(ContextApi).data
 
-    console.log(sample);
+
 
   return (
-    <main className='blogMain'>Blog</main>
+    <main className='blogMain'>
+      <div className="flexContainer">
+        {blog.length && blog.map((e,i)=>{
+          return (
+            <div className='cards' key={e.id}>
+              <img src={e.src} alt="blogE.svg" />
+              <div className="title">{e.header}</div>
+              <div className="description">{e.description}</div>
+              <a href="http://github.com">Read more</a>
+            </div>
+          )
+        })}
+      </div>
+    </main>
   )
 }
