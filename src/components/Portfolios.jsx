@@ -4,7 +4,6 @@ import ContextApi from '../ContextApi'
 export default function Portfolios() {
 
     const { portfolios } = useContext(ContextApi).data
-    console.log(portfolios);
 
     return (
         <main className='portfoliosMain'>
