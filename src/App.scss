@@ -3,6 +3,12 @@ body {
 }
 
 nav {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    transition: 0.3s all ease-in-out;
     .navDesktop {
         width: 100%;
         height: 54px;
@@ -14,10 +20,6 @@ nav {
         box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
         backdrop-filter: blur(21px);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-        position: fixed;
-        z-index: 20;
-        top: 0;
-        left: 0;
         transition: 0.3s all ease-in-out;
         a {
             font-weight: 700;
@@ -44,13 +46,15 @@ nav {
     .navMobile{
         display: none;
         flex-direction: column;
-        overflow: hidden;
         width: 100%;
-        height: 54px; //todo deyismek lazimdi
+        height: 54px; //todo default 250px
+        overflow: hidden;
+        transition: 0.3s all ease-in-out;
         .top{
             background: linear-gradient(158.71deg, rgba(255, 255, 255, 0.4) -100%, rgba(255, 255, 255, 0.04) 100%);
             box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
             height: 54px !important;
+            flex-shrink: 0;
             padding: 0 24px;
             backdrop-filter: blur(21px);
             position: relative;
@@ -62,6 +66,22 @@ nav {
                 top: calc(50% - 12px);
                 left: 24px;
                 cursor: pointer;
+            }
+        }
+        .navMain{
+            background: linear-gradient(158.71deg, rgba(255, 255, 255, 0.5) -100%, rgba(255, 255, 255, 0.07) 100%);
+            height: 196px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            >a{
+                height: 27px;
+                display: flex;
+                align-items: center;
+                padding-left: 5px;
+                background: rgba(0, 0, 0, 0.35);
+                border-radius: 10px;
             }
         }
     }
